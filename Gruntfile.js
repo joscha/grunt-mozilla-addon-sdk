@@ -57,7 +57,6 @@ module.exports = function(grunt) {
           "mozilla-addon-sdk": "1_14",
           extension_dir: "test/fixtures/test-addon",
           dist_dir: "tmp/dist",
-          arguments: "--strip-sdk" // builds smaller xpis 
         }
       },
       'test_space_names': {
@@ -65,6 +64,14 @@ module.exports = function(grunt) {
           "mozilla-addon-sdk": "1_14_spacename",
           extension_dir: "test/fixtures/test addon dirname with spaces",
           dist_dir: "tmp/dist spacename"
+        }
+      },
+      'test_strip_sdk_false': {
+        options: {
+          "mozilla-addon-sdk": "1_14",
+          extension_dir: "test/fixtures/test-addon",
+          dist_dir: "tmp/dist_bundled_sdk",
+          strip_sdk: false
         }
       }
     },

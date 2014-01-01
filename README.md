@@ -44,14 +44,14 @@ grunt.initConfig({
         "mozilla-addon-sdk": "1_14",
         extension_dir: "ff_extension",
         dist_dir: "tmp/dist-stable",
-        arguments: "--strip-sdk" // builds smaller xpis
       }
     },
     'experimental': {
       options: {
         "mozilla-addon-sdk": "master",
         extension_dir: "ff_extension",
-        dist_dir: "tmp/dist-experimental"
+        dist_dir: "tmp/dist-experimental",
+        strip_sdk: false // true by default
       }
     },
   },
@@ -149,6 +149,12 @@ Type: `String`
 Default value: `null`
 
 A string value that is used as the path where the generated addon xpi should be moved.
+
+#### strip_sdk
+Type: `Bool`
+Default value: `true`
+
+A boolean value that is used to configure if addon-sdk bundled modules will be stripped from the xpi.
 
 ### mozilla-cfx
 
